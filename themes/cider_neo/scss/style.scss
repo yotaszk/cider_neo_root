@@ -1,0 +1,102 @@
+/*
+Theme Name: Cider Neo
+Author: the Yota Suzuki
+Author URI: https://yo-ta.me/
+Version: 1.0
+*/
+
+$white: #fff !default;
+$dark90: rgba(0, 0, 0, 0.9) !default;
+$dark70: rgba(0, 0, 0, 0.7) !default;
+$dark30: rgba(0, 0, 0, 0.3) !default;
+$dark10: rgba(0, 0, 0, 0.1) !default;
+$dark05: rgba(0, 0, 0, 0.05) !default;
+$primary: #FDD734 !default;
+
+a,
+article,
+aside,
+blockquote,
+body,
+cite,
+code,
+div,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+html,
+i,
+iframe,
+img,
+input,
+kbd,
+label,
+li,
+nav,
+object,
+ol,
+p,
+pre,
+s,
+section,
+span,
+strong,
+table,
+tbody,
+time,
+ul,
+video {
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+html {
+    background-color: #fff;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    font-family: -apple-system,BlinkMacSystemFont,\.SFNSDisplay-Regular,"Hiragino Kaku Gothic ProN",Meiryo,san-serif;
+}
+
+img,
+object,
+video {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 0;
+    vertical-align: bottom;
+}
+
+a {
+  color: #08c;
+  text-decoration: none;
+}
+
+.AD-L {
+  background-color: $dark10;
+  width: 1100px;
+  height: 240px;
+  margin: 0 auto 48px;
+}
+
+@import "layout";
+@import "components/*.scss";

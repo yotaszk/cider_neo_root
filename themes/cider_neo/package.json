@@ -1,0 +1,22 @@
+{
+  "name": "cider_neo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass:build": "node-sass --include-path scss scss/style.scss ./style.css --output-style expanded --importer node_modules/node-sass-globbing/index.js",
+    "sass:watch": "nodemon -e scss -x \"npm run sass:build\"",
+    "sync": "browser-sync start --proxy localhost:8000  --files './**/*.css, ./**/*.php, ./**/*.scss'",
+    "dev": "run-p sass:build sass:watch sync"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "node-sass": "^4.13.1",
+    "node-sass-globbing": "0.0.23",
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5"
+  }
+}

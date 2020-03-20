@@ -1,0 +1,196 @@
+/*
+Theme Name: Cider Neo
+Author: the Yota Suzuki
+Author URI: https://yo-ta.me/
+Version: 1.0
+*/
+a,
+article,
+aside,
+blockquote,
+body,
+cite,
+code,
+div,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+html,
+i,
+iframe,
+img,
+input,
+kbd,
+label,
+li,
+nav,
+object,
+ol,
+p,
+pre,
+s,
+section,
+span,
+strong,
+table,
+tbody,
+time,
+ul,
+video {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+html {
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: -apple-system,BlinkMacSystemFont,\.SFNSDisplay-Regular,"Hiragino Kaku Gothic ProN",Meiryo,san-serif;
+}
+
+img,
+object,
+video {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  vertical-align: bottom;
+}
+
+a {
+  color: #08c;
+  text-decoration: none;
+}
+
+.AD-L {
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 1100px;
+  height: 240px;
+  margin: 0 auto 48px;
+}
+
+.Layout-Split {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  align-content: center;
+}
+
+.Layout-Towsplit {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  grid-gap: 32px;
+}
+
+.Article {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.Article-Title {
+  font-size: 32px;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.Article-Time {
+  margin-bottom: 32px;
+}
+
+.Article-Content p {
+  font-size: 17px;
+  line-height: 2;
+  margin-bottom: 24px;
+  width: 90%;
+  margin: 0 auto 24px;
+}
+
+.Article-Figure {
+  margin-bottom: 48px;
+}
+
+.Article-Figure img {
+  border-radius: 6px;
+}
+
+.Article h2 {
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+
+.Article .youtube-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 0;
+  margin-bottom: 32px;
+  height: 0;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.Article .youtube-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.Article .wp-block-image {
+  margin-bottom: 32px;
+}
+
+.Article ul, .Article li {
+  width: 90%;
+  margin: 0 auto 32px;
+}
+
+.Header {
+  background-color: #FDD734;
+  padding: 24px;
+  margin-bottom: 48px;
+}
+
+Nav {
+  text-align: right;
+}
+
+.Youtube {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 24px;
+}
+
+.Youtube-Embed {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  margin: 0 !important;
+}
+
+.Youtube-Iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
+}

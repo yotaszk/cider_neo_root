@@ -1,0 +1,17 @@
+.Youtube {
+  background-color: $dark05;
+  padding: 24px;
+  &-Embed {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    margin: 0 !important;
+  }
+  &-Iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
