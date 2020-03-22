@@ -1,0 +1,25 @@
+.Editor {
+  &-Links {
+    display: grid;
+    grid-gap: 6px;
+    grid-template-columns: repeat(4, 1fr);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100% !important;
+  }
+  &-Icon {
+    display: block;
+    border-radius: 50%;
+    margin-bottom: 16px;
+  }
+  &-Name {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+  }
+  &-More {
+    font-size: 12px;
+  }
+}
