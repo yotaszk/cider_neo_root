@@ -1,11 +1,35 @@
 .Pickup {
+  margin-bottom: 64px;
+
+  &-Heading {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 24px;
+  }
+
   &-Cards {
     display: block;
-    
     @include mq() {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-gap: 24px;
+      grid-gap: 32px;
     }
+  }
+
+  &-Figure {
+    margin-bottom: 16px;
+  }
+
+  &-Time {
+    display: block;
+    font-size: 14px;
+    color: $dark50;
+    margin-bottom: 6px;
+  }
+
+  &-Title {
+    color: $dark90;
+    font-size: 18px;
+    line-height: 1.4;
   }
 }

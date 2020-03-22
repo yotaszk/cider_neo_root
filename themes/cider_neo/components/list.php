@@ -1,9 +1,9 @@
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-<article class="Card">
-	<a href="<?php the_permalink(); ?>" class="Card-Wrapper" title="<?php the_title(); ?>">
+<article>
+	<a href="<?php the_permalink(); ?>" class="Card" title="<?php the_title(); ?>">
 		<figure class="Card-Figure">
 			<?php if ( has_post_thumbnail() ): ?>
-				<?php $post_title= get_the_title(); the_post_thumbnail('thumbnail', array('class' => 'Image Card-Image' ,'alt' => $post_title)); ?>
+				<?php $post_title= get_the_title(); the_post_thumbnail('', array('class' => 'Image Card-Image' ,'alt' => $post_title)); ?>
 			<?php endif; ?>
 		</figure>
 		<header class="Card-Header">

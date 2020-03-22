@@ -23,7 +23,7 @@
     font-size: 16px;
     font-weight: normal;
     margin-bottom: 16px;
-    color: $dark70;
+    color: $dark50;
     line-height: 1.4;
     @include mq() {
       font-size: 18px;
@@ -32,7 +32,7 @@
 
   &-Time {
     margin-bottom: 32px;
-    color: $dark70;
+    color: $dark50;
     font-size: 12px;
     @include mq() {
       font-size: 14px;

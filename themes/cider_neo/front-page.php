@@ -9,10 +9,10 @@
 
 <div class="Layout-Single">  
 
-  <?php get_template_part( 'components/top-tab' ); ?>
+  <?php get_template_part( 'components/tab' ); ?>
 
   <section class="New">
-  <h2>New</h2>
+  <h2 class="New-Heading">New</h2>
   <?php get_template_part( 'components/list' ); ?>
   </section>
 </div>

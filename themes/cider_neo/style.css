@@ -258,6 +258,15 @@ a {
   height: 100%;
 }
 
+.Card {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+}
+
 .Editor {
   display: grid;
   grid-template-columns: 1fr 7fr;
@@ -351,13 +360,13 @@ a {
 
 .Frontpage {
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 64px auto 0;
 }
 
-.Card a {
-  display: flex;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 24px 0;
+.New-Heading {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 24px;
 }
 
 .Header {
@@ -420,6 +429,16 @@ Nav {
   text-align: right;
 }
 
+.Pickup {
+  margin-bottom: 64px;
+}
+
+.Pickup-Heading {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
 .Pickup-Cards {
   display: block;
 }
@@ -428,12 +447,78 @@ Nav {
   .Pickup-Cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 24px;
+    grid-gap: 32px;
   }
 }
 
+.Pickup-Figure {
+  margin-bottom: 16px;
+}
+
+.Pickup-Time {
+  display: block;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 6px;
+}
+
+.Pickup-Title {
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 18px;
+  line-height: 1.4;
+}
+
 .Profile {
-  width: 300px;
+  margin-bottom: 64px;
+}
+
+.Profile-Heading {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.Profile-Info {
+  display: block;
+}
+
+@media screen and (min-width: 834px) {
+  .Profile-Info {
+    display: grid;
+    grid-template-columns: 1fr 7fr 3fr;
+    grid-gap: 16px;
+    align-items: center;
+  }
+}
+
+.Profile-Links {
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Profile-Icon {
+  width: auto;
+  height: 30px;
+}
+
+.Profile-Img {
+  display: block;
+  border-radius: 50%;
+}
+
+.Profile-Name {
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.Profile-Desc {
+  line-height: 1.5;
 }
 
 .Share {
@@ -512,7 +597,7 @@ Nav {
   font-size: 16px;
   font-weight: normal;
   margin-bottom: 16px;
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.5);
   line-height: 1.4;
 }
 
@@ -524,7 +609,7 @@ Nav {
 
 .Single-Time {
   margin-bottom: 32px;
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.5);
   font-size: 12px;
 }
 
@@ -537,6 +622,21 @@ Nav {
 .Single-Publish {
   display: inline-block;
   margin-right: 12px;
+}
+
+.Tab {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Tab-Link {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 18px 12px;
+  margin-bottom: 16px;
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: bold;
 }
 
 .Youtube {
@@ -563,6 +663,27 @@ Nav {
   grid-gap: 48px;
   max-width: 1100px;
   margin: 0 auto;
+}
+
+.Youtube-Desc {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.Youtube-Label {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.Youtube-Heading {
+  display: block;
+  font-size: 32px;
+  margin-bottom: 16px;
+  font-weight: bold;
 }
 
 .AD-L {

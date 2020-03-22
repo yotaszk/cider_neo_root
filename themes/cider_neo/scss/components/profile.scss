@@ -1,3 +1,50 @@
 .Profile {
-  width: 300px;
+  margin-bottom: 64px;
+
+  &-Heading {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 24px;
+  }
+
+  &-Info {
+    display: block;
+    @include mq() {
+      display: grid;
+      grid-template-columns: 1fr 7fr 3fr;
+      grid-gap: 16px;
+      align-items: center;
+    }
+  }
+
+  &-Links {
+    display: grid;
+    grid-gap: 6px;
+    grid-template-columns: repeat(4, 1fr);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &-Icon {
+    width: auto;   
+    height: 30px;
+  }
+
+  &-Img {
+    display: block;
+    border-radius: 50%;
+  }
+
+  &-Name {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  &-Desc {
+    line-height: 1.5;
+
+  }
 }
