@@ -3,7 +3,7 @@
 
 <div class="Frontpage">
   <?php get_template_part( 'components/pickup' ); ?>
-  <?php get_template_part( 'components/top-profile' ); ?>
+  <?php get_template_part( 'components/profile' ); ?>
 
   <div class="AD-L"></div>
 

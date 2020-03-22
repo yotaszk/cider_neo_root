@@ -1,12 +1,10 @@
 .Frontpage {
-  width: 1100px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
-.New {
-  .Card a{
-    display: flex;
-    border-bottom: 1px solid $dark10;
-    padding: 24px 0;
-  }
+.Card a{
+  display: flex;
+  border-bottom: 1px solid $dark10;
+  padding: 24px 0;
 }

@@ -1,7 +1,11 @@
 .Pickup {
   &-Cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 24px;
+    display: block;
+    
+    @include mq() {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 24px;
+    }
   }
 }

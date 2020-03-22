@@ -1,4 +1,16 @@
 .Header {
   background-color: $primary;
-  padding: 24px;
+  padding: 40px 4vw;
+}
+
+.Logo {
+position: relative;
+  img {
+    position: absolute;
+    left: 0;
+    width: 170px;
+  }
+  span {
+    opacity: 0;
+  }
 }
