@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 <div class="Single">
-
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
       <header class="Single-Header">
         <?php the_title('<h1 class="Single-Title">', '</h1>'); ?>
@@ -19,7 +18,7 @@
 
       <div class="AD-L"></div>
 
-      <div class="Layout-Towsplit">  
+      <div class="Layout-Single">  
         <?php get_template_part('/components/editor'); ?>
         <article class="Article">
           <!-- <figure class="Article-Figure">
@@ -39,11 +38,14 @@
               <?php the_tags('', ''); ?>
             </div>
           </div>
+
+          <div class="AD-L"></div>
+          
           <?php get_template_part('components/share'); ?>
         </article>
       </div>
   <?php endwhile;
   endif; ?>
-</article>
-
+</div>
+<?php get_template_part( 'components/youtube' ); ?>
 <?php get_footer(); ?>

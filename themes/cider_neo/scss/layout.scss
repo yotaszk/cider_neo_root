@@ -5,8 +5,22 @@
   align-content: center;
 }
 
-.Layout-Towsplit {
-  display: grid;
-  grid-template-columns: 1fr 9fr;
-  grid-gap: 32px;
+.Layout-SplitOnlyDesktop {
+  display: block;
+  @include mq() {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    align-content: center;
+  }
+}
+
+.Layout-Single {
+  display: block;
+
+  @include mq() {
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    grid-gap: 32px;
+  }
 }

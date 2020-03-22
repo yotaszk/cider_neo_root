@@ -1,4 +1,24 @@
 .Editor {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  grid-gap: 12px;
+  margin-bottom: 32px;
+  padding: 0 4vw;
+  @include mq() {
+    display: block;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  &-Info {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    align-content: center;
+    @include mq() {
+      display: block;
+      align-content: unset;
+    }
+  }
   &-Links {
     display: grid;
     grid-gap: 6px;
@@ -6,20 +26,39 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    width: 100% !important;
   }
   &-Icon {
+    width: auto;
+    height: 30px;
+  }
+  &-Img {
     display: block;
     border-radius: 50%;
-    margin-bottom: 16px;
+    @include mq() {
+      margin-bottom: 16px;
+    }
   }
   &-Name {
     display: block;
     font-weight: bold;
-    font-size: 14px;
-    text-align: center;
+    font-size: 12px;
+    margin-bottom: 2px;
+    br {
+      display: none;
+    }
+    @include mq() {
+      font-size: 14px;
+      text-emphasis: center;
+      margin-bottom: 0;
+    }
   }
   &-More {
     font-size: 12px;
+  }
+  &-Title {
+    display: none;
+    @include mq() {
+      display: block;
+    }
   }
 }

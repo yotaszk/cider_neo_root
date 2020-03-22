@@ -1,5 +1,5 @@
 <section class="Youtube">
-  <div class="L_Youtube-Block">
+  <div class="Layout-SplitOnlyDesktop Youtube-Split">
     <figure class="Youtube-Embed">
       <iframe class="Youtube-Iframe" width="560" height="315" src="https://www.youtube.com/embed/?list=UUwwNbCFZ6rAmJZvB3e0EHcA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </figure>

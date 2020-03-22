@@ -1,4 +1,8 @@
 .Meta {
+  padding: 0 4vw;
+  @include mq() {
+    padding: 0;
+  }
   &-Title {
     font-size: 18px;
     font-weight: bold;

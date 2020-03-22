@@ -1,6 +1,6 @@
 .Youtube {
   background-color: $dark05;
-  padding: 24px;
+  padding: 48px;
   &-Embed {
     position: relative;
     width: 100%;
@@ -13,5 +13,10 @@
     right: 0;
     width: 100% !important;
     height: 100% !important;
+  }
+  &-Split {
+    grid-gap: 48px;
+    max-width: 1100px;
+    margin: 0 auto;
   }
 }
