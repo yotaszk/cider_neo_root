@@ -14,7 +14,7 @@
   &-Content {
     margin: 0 auto 48px;
 
-    p, blockquote{
+    > p, blockquote, .Mobilelink{
       font-size: 16px;
       line-height: 2;
       margin: 0 auto 32px;
@@ -26,7 +26,33 @@
       }
     }
 
-    h2 {
+    blockquote {
+      background-color: $dark05;
+      border-left: 6px solid $dark10;
+      padding: 32px;
+
+      p {
+        line-height: 2;
+      }
+
+      ul, ol {
+        padding-left: 32px;
+        margin: 0 auto;
+        font-size: 16px;
+        li {
+          margin-bottom: 8px;
+          line-height: 1.5;
+        }
+      }
+
+      cite {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-top: 32px;
+      }
+    }
+
+    > h2 {
       font-size: 20px;
       margin: 0 4vw 32px;
       border-left: 6px solid $primary;
@@ -34,19 +60,23 @@
       padding: 12px 16px;
       line-height: 1.4;
       @include mq() {
+        width: 90%;
         font-size: 24px;
+        margin: 0 auto 32px;
         padding: 16px 24px;
       }
     }
 
-    h3 {
+    > h3 {
       font-size: 20px;
       margin: 0 4vw 32px;
       border-left: 6px solid $primary;
       padding: 12px 16px;
       line-height: 1.4;
       @include mq() {
+        width: 90%;
         font-size: 24px;
+        margin: 0 auto 32px;
         padding: 16px 24px;
       }
     }
@@ -63,7 +93,7 @@
         text-align: center;
       }
     }
-    ul, ol {
+    > ul, > ol {
       padding: 0 4vw 0 9vw;
       margin: 0 auto 32px;
       font-size: 16px;
@@ -77,6 +107,7 @@
         padding: 0;
       }
     }
+
     .youtube-wrap {
       position: relative;
       padding-bottom: 56.25%;
@@ -90,6 +121,44 @@
         left: 0;
         width: 100%;
         height: 100%;
+      }
+    }
+
+    .Mobilelink {
+      background-color: $dark05;
+      padding: 24px 4vw;
+      @include mq() {
+        padding: 24px 32px;
+      }
+
+      &-Heading {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 24px;
+        @include mq() {
+          font-size: 18px;
+        }
+      }
+
+      &-Items {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 12px;
+
+        @include mq() {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      &-Item {
+        display: block;
+        padding: 12px;
+        text-align: center;
+        color: $white;
+        font-size: 14px;
+        border-radius: 4px;
       }
     }
   }

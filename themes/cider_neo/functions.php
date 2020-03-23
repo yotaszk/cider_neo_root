@@ -1,6 +1,7 @@
 <?php
-
+// title
 add_theme_support('title-tag');
+
 // support thumbnails
 add_theme_support('post-thumbnails');
 
@@ -30,6 +31,35 @@ remove_action('wp_head', 'start_post_rel_link', 10, 0);
 remove_action('wp_head', 'rest_output_link_wp_head');
 remove_action('wp_head', 'feed_links', 2);
 remove_action('wp_head', 'feed_links_extra', 3);
+
+add_action( 'widgets_init', 'remove_recent_comments_style' );
+function remove_recent_comments_style() {
+    global $wp_widget_factory;
+    remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );
+}
+
+add_action( 'wp_enqueue_scripts', 'dequeue_devicepx', 20 );
+function dequeue_devicepx() {
+wp_dequeue_script( 'devicepx' );
+}
+
+//comment coustomize
+add_filter('comment_form_default_fields', 'mytheme_remove_url');
+  function mytheme_remove_url($arg) {
+  $arg['url'] = '';
+  $arg['email'] = '';
+  return $arg;
+}
+
+//add class
+add_filter( 'previous_posts_link_attributes', 'add_prev_posts_link_class' );
+function add_prev_posts_link_class() {
+  return 'class="Card-Link"';
+}
+add_filter( 'next_posts_link_attributes', 'add_next_posts_link_class' );
+function add_next_posts_link_class() {
+  return 'class="Card-Link"';
+}
 
 //youtube
 if (!function_exists('st_wrap_iframe_in_div')) {
@@ -136,13 +166,13 @@ function xyz_amp_modify_json_metadata($metadata, $post)
 //iphoneアフィリ
 function mobile_links_func()
 {
-  return '<div class="mobile-links-wrap">
- <div class="mobile-links-title">新型iPhoneの予約はこちら</div>
- <ul class="mobile-links-ul">
-   <li class="mobile-links-item c-apple"><a href="https://apple.sjv.io/c/1403921/548367/7648">Apple公式サイト</a></li>
-   <li class="mobile-links-item c-docomo"><a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3243923&pid=885371442"><img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3243923&pid=885371442" height="1" width="1" border="0">ドコモショップ</a></li>
-   <li class="mobile-links-item c-au"><a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3243923&pid=885371675"><img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3243923&pid=885371675" height="1" width="1" border="0">auショップ</a></li>
-   <li class="mobile-links-item c-softbank"><a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3243923&pid=885371678"><img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3243923&pid=885371678" height="1" width="1" border="0">ソフトバンク</a></li>
+  return '<div class="Mobilelink">
+ <div class="Mobilelink-Heading">&#092; iPhoneの予約はこちら &#047;</div>
+ <ul class="Mobilelink-Items">
+   <li><a class="Mobilelink-Item Apple" href="https://apple.sjv.io/c/1403921/548367/7648">Apple公式サイト</a></li>
+   <li><a class="Mobilelink-Item Docomo" href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3243923&pid=885371442"><img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3243923&pid=885371442" height="1" width="1" border="0">ドコモショップ</a></li>
+   <li><a class="Mobilelink-Item Au" href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3243923&pid=885371675"><img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3243923&pid=885371675" height="1" width="1" border="0">auショップ</a></li>
+   <li><a class="Mobilelink-Item Softbank" href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3243923&pid=885371678"><img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3243923&pid=885371678" height="1" width="1" border="0">ソフトバンク</a></li>
  </ul>
  </div>';
 }

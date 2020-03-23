@@ -114,12 +114,28 @@ a {
   }
 }
 
-.Tw {
+.Twitter {
   background-color: #1da1f2;
 }
 
-.Fb {
+.Facebook {
   background-color: #29487d;
+}
+
+.Apple {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.Softbank {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.Docomo {
+  background-color: #d50c38;
+}
+
+.Au {
+  background-color: #eb5505;
 }
 
 .Layout-Split {
@@ -178,7 +194,7 @@ a {
   margin: 0 auto 48px;
 }
 
-.Article-Content p, .Article-Content blockquote {
+.Article-Content > p, .Article-Content blockquote, .Article-Content .Mobilelink {
   font-size: 16px;
   line-height: 2;
   margin: 0 auto 32px;
@@ -186,14 +202,41 @@ a {
 }
 
 @media screen and (min-width: 834px) {
-  .Article-Content p, .Article-Content blockquote {
+  .Article-Content > p, .Article-Content blockquote, .Article-Content .Mobilelink {
     padding: 0;
     width: 90%;
     font-size: 17px;
   }
 }
 
-.Article-Content h2 {
+.Article-Content blockquote {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-left: 6px solid rgba(0, 0, 0, 0.1);
+  padding: 32px;
+}
+
+.Article-Content blockquote p {
+  line-height: 2;
+}
+
+.Article-Content blockquote ul, .Article-Content blockquote ol {
+  padding-left: 32px;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+.Article-Content blockquote ul li, .Article-Content blockquote ol li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.Article-Content blockquote cite {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-top: 32px;
+}
+
+.Article-Content > h2 {
   font-size: 20px;
   margin: 0 4vw 32px;
   border-left: 6px solid #fdd734;
@@ -203,13 +246,15 @@ a {
 }
 
 @media screen and (min-width: 834px) {
-  .Article-Content h2 {
+  .Article-Content > h2 {
+    width: 90%;
     font-size: 24px;
+    margin: 0 auto 32px;
     padding: 16px 24px;
   }
 }
 
-.Article-Content h3 {
+.Article-Content > h3 {
   font-size: 20px;
   margin: 0 4vw 32px;
   border-left: 6px solid #fdd734;
@@ -218,8 +263,10 @@ a {
 }
 
 @media screen and (min-width: 834px) {
-  .Article-Content h3 {
+  .Article-Content > h3 {
+    width: 90%;
     font-size: 24px;
+    margin: 0 auto 32px;
     padding: 16px 24px;
   }
 }
@@ -237,19 +284,19 @@ a {
   text-align: center;
 }
 
-.Article-Content ul, .Article-Content ol {
+.Article-Content > ul, .Article-Content > ol {
   padding: 0 4vw 0 9vw;
   margin: 0 auto 32px;
   font-size: 16px;
 }
 
-.Article-Content ul li, .Article-Content ol li {
+.Article-Content > ul li, .Article-Content > ol li {
   margin-bottom: 16px;
   line-height: 1.5;
 }
 
 @media screen and (min-width: 834px) {
-  .Article-Content ul, .Article-Content ol {
+  .Article-Content > ul, .Article-Content > ol {
     font-size: 17px;
     width: 84%;
     padding: 0;
@@ -273,6 +320,52 @@ a {
   height: 100%;
 }
 
+.Article-Content .Mobilelink {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 24px 4vw;
+}
+
+@media screen and (min-width: 834px) {
+  .Article-Content .Mobilelink {
+    padding: 24px 32px;
+  }
+}
+
+.Article-Content .Mobilelink-Heading {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 834px) {
+  .Article-Content .Mobilelink-Heading {
+    font-size: 18px;
+  }
+}
+
+.Article-Content .Mobilelink-Items {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 12px;
+}
+
+@media screen and (min-width: 834px) {
+  .Article-Content .Mobilelink-Items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.Article-Content .Mobilelink-Item {
+  display: block;
+  padding: 12px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
 .Card {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -293,6 +386,125 @@ a {
   color: rgba(0, 0, 0, 0.9);
   font-size: 20px;
   line-height: 1.5;
+}
+
+.Card-Link {
+  display: block;
+  padding: 16px 0;
+  margin-top: 32px;
+  background-color: #fdd734;
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: bold;
+  text-align: center;
+  border-radius: 20px;
+}
+
+form#commentform {
+  margin: 2pc 0 3pc;
+}
+
+.comment-form-author label,
+.comment-form-comment label {
+  display: block;
+  margin-bottom: 9pt;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+textarea#comment {
+  line-height: 1.5;
+}
+
+input#author,
+textarea#comment {
+  background-color: rgba(0, 0, 0, 0.05);
+  width: 100%;
+  border: 0;
+  font-size: 1pc;
+  border-radius: 0;
+  padding: 1pc;
+  margin-bottom: 30px;
+}
+
+input#submit {
+  width: 100%;
+  max-width: 340px;
+  font-weight: 700;
+  margin: 0 auto;
+  display: block;
+  padding: 16px 0;
+  margin-top: 32px;
+  background-color: #fdd734;
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: bold;
+  text-align: center;
+  border-radius: 30px;
+}
+
+li.comment {
+  list-style: none;
+}
+
+.comment-body {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+}
+
+.comment-meta {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.comment-meta a {
+  color: #999;
+}
+
+.comment-body p {
+  margin-bottom: 30px;
+  font-size: 1pc;
+  color: #333;
+  line-height: 1.5;
+}
+
+.comment-author {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.fn {
+  font-style: normal;
+}
+
+.says {
+  display: none;
+}
+
+ul.children .comment-body {
+  padding-left: 40px;
+}
+
+.reply {
+  text-align: right;
+}
+
+.reply a {
+  padding: 0 24px;
+  border-radius: 1pc;
+  display: inline-block;
+  color: #0070c9;
+  background-color: rgba(0, 0, 0, 0.05);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 2pc;
+}
+
+.article__text {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 24px;
 }
 
 .Editor {
@@ -343,6 +555,11 @@ a {
   }
 }
 
+.Editor-Link {
+  display: block;
+  text-align: center;
+}
+
 .Editor-Icon {
   width: auto;
   height: 30px;
@@ -389,7 +606,7 @@ a {
 @media screen and (min-width: 834px) {
   .Editor-More {
     text-align: center;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   }
 }
 
@@ -402,12 +619,34 @@ a {
     text-align: center;
     font-size: 12px;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
 }
 
 .Footer {
-  padding: 48px;
+  max-width: 1100px;
+  padding: 48px 4vw;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 834px) {
+  .Footer {
+    display: grid;
+    grid-template-columns: 1fr 6fr 3fr;
+    grid-gap: 32px;
+    align-items: center;
+    padding: 64px 0;
+  }
+}
+
+.Footer-Logo svg {
+  width: 120px;
+}
+
+.Footer-Desc {
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .Frontpage {
@@ -422,7 +661,13 @@ a {
 
 .Header {
   background-color: #fdd734;
-  padding: 40px 4vw;
+  padding: 20px 4vw;
+}
+
+@media screen and (min-width: 834px) {
+  .Header {
+    padding: 40px 4vw;
+  }
 }
 
 .Logo {
@@ -432,8 +677,15 @@ a {
 .Logo svg {
   position: absolute;
   left: 0;
-  top: -12px;
-  width: 180px;
+  top: -19px;
+  width: 120px;
+}
+
+@media screen and (min-width: 834px) {
+  .Logo svg {
+    top: -10px;
+    width: 180px;
+  }
 }
 
 .Logo-Caption {
@@ -546,20 +798,6 @@ Nav {
   }
 }
 
-.Profile-Links {
-  display: grid;
-  grid-gap: 6px;
-  grid-template-columns: repeat(4, 1fr);
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.Profile-Icon {
-  width: auto;
-  height: 30px;
-}
-
 .Profile-Img {
   display: block;
   border-radius: 50%;
@@ -576,6 +814,10 @@ Nav {
   line-height: 1.4;
 }
 
+.Related {
+  margin-bottom: 32px;
+}
+
 .Share {
   padding: 0 4vw;
 }
@@ -583,6 +825,7 @@ Nav {
 @media screen and (min-width: 834px) {
   .Share {
     padding: 0;
+    margin-bottom: 48px;
   }
 }
 
@@ -617,7 +860,7 @@ Nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
+  border-radius: 30px;
   color: #fff;
 }
 
@@ -638,7 +881,7 @@ Nav {
 
 .Single-Title {
   font-size: 24px;
-  margin: 32px 0 16px;
+  margin: 48px 0 16px;
   line-height: 1.5;
 }
 
@@ -680,6 +923,25 @@ Nav {
   margin-right: 12px;
 }
 
+.Sns-Links {
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Sns-Link {
+  display: block;
+  text-align: center;
+}
+
+.Sns-Icon {
+  width: auto;
+  height: 30px;
+}
+
 .Tab {
   list-style: none;
   display: flex;
@@ -716,15 +978,26 @@ Nav {
 }
 
 .Youtube {
-  background-color: rgba(0, 0, 0, 0.05);
-  padding: 64px;
+  padding: 48px 4vw;
+}
+
+@media screen and (min-width: 834px) {
+  .Youtube {
+    padding: 64px;
+  }
 }
 
 .Youtube-Embed {
   position: relative;
   width: 100%;
   padding-top: 56.25%;
-  margin: 0 !important;
+  margin: 0 0 32px 0;
+}
+
+@media screen and (min-width: 834px) {
+  .Youtube-Embed {
+    margin: 0;
+  }
 }
 
 .Youtube-Iframe {
@@ -742,8 +1015,14 @@ Nav {
 }
 
 .Youtube-Desc {
-  font-size: 20px;
+  font-size: 14px;
   line-height: 1.5;
+}
+
+@media screen and (min-width: 834px) {
+  .Youtube-Desc {
+    font-size: 20px;
+  }
 }
 
 .Youtube-Label {
@@ -757,21 +1036,13 @@ Nav {
 
 .Youtube-Heading {
   display: block;
-  font-size: 32px;
+  font-size: 24px;
   margin-bottom: 16px;
   font-weight: bold;
 }
 
-.AD-L {
-  background-color: rgba(0, 0, 0, 0.1);
-  max-width: 1100px;
-  width: 100%;
-  height: 240px;
-  margin: 0 auto 32px;
-}
-
 @media screen and (min-width: 834px) {
-  .AD-L {
-    margin: 0 auto 48px;
+  .Youtube-Heading {
+    font-size: 32px;
   }
 }

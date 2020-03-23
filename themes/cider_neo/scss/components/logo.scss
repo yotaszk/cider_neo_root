@@ -3,8 +3,12 @@
     svg {
       position: absolute;
       left: 0;
-      top: -12px;
-      width: 180px;
+      top: -19px;
+      width: 120px;
+      @include mq() {
+        top: -10px;
+        width: 180px;
+      }
     }
     &-Caption {
       color: $primary;

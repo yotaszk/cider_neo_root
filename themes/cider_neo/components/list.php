@@ -13,3 +13,6 @@
 	</a>
 </article>
 <?php endwhile; endif; ?>
+
+<?php next_posts_link( 'Next' ); ?>
+<?php previous_posts_link( 'Prev' ); ?>

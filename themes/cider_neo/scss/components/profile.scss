@@ -17,20 +17,6 @@
     }
   }
 
-  &-Links {
-    display: grid;
-    grid-gap: 6px;
-    grid-template-columns: repeat(4, 1fr);
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  &-Icon {
-    width: auto;   
-    height: 30px;
-  }
-
   &-Img {
     display: block;
     border-radius: 50%;
