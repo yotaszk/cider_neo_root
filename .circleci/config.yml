@@ -17,7 +17,7 @@ jobs:
       - run:
           name: Deploy Over SSH
           # command: ssh ubuntu@18.177.65.239 "cd /var/www/html/youtachannel.com/wp-content/themes/cider_card;git pull;echo Finish;exit;"
-          command: ssh -p 22 ubuntu@172.26.1.34 "cd /var/;touch tests;echo Finish;exit;"
+          command: ssh ubuntu@172.26.1.34
 
 workflows:
   # Name the workflow "welcome"
