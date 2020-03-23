@@ -16,9 +16,15 @@
         </div>
       </header>
 
-      <div class="AD-L"></div>
+      <aside class="header_ads">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6699082147104021" data-ad-slot="7387828569" data-ad-format="auto"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </aside>
 
-      <div class="Layout-Single">  
+      <div class="Layout-Single">
         <?php get_template_part('/components/editor'); ?>
         <article class="Article">
           <figure class="Article-Figure">
@@ -36,13 +42,20 @@
             </div>
           </div>
 
-          <div class="AD-L"></div>
-          
+          <aside class="Related" role="complementary">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6699082147104021" data-ad-slot="4448209196"></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+          </aside>
+
           <?php get_template_part('components/share'); ?>
+          <?php comments_template(); ?>
         </article>
       </div>
   <?php endwhile;
   endif; ?>
 </div>
-<?php get_template_part( 'components/youtube' ); ?>
+<?php get_template_part('components/youtube'); ?>
 <?php get_footer(); ?>
