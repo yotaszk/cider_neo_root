@@ -13,12 +13,12 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints:
-            - "44:1f:87:b7:ec:b5:67:5f:22:61:fb:0a:22:ac:30:c6"
+            - "8b:77:28:ce:6b:83:b3:90:65:d2:45:fe:25:a1:72:9f"
       - run:
           name: Deploy Over SSH
           # command: ssh ubuntu@18.177.65.239 "cd /var/www/html/youtachannel.com/wp-content/themes/cider_card;git pull;echo Finish;exit;"
           # command: ssh ubuntu@18.177.65.239 "cd /var/;touch test;echo Finish;exit;"
-          command: ssh ubuntu@18.177.65.239
+          command: ssh -p 22 ubuntu@18.177.65.239
 
 workflows:
   # Name the workflow "welcome"
