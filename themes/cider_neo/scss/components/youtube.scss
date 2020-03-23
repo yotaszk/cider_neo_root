@@ -1,5 +1,6 @@
 .Youtube {
   padding: 48px 4vw;
+  background-color: $dark05;
   @include mq() {
     padding: 64px;
   }

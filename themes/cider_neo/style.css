@@ -979,6 +979,7 @@ Nav {
 
 .Youtube {
   padding: 48px 4vw;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 @media screen and (min-width: 834px) {
