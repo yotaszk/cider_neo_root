@@ -5,7 +5,7 @@
       <span class="Editor-Name">よーた <br>/ Yota Suzuki</span>
       <a class="Editor-More" href="/profile">著者について</a>
     </div>
-    <p class="Editor-Title">Follow me</p>
+    <p class="Editor-Title">&#092; Follow me &#047;</p>
     <ul class="Editor-Links">
       <li class="Editor-Link">
         <a href="https://twitter.com/yotaszk/" target="_blank" rel="noopener noreferrer">

@@ -29,7 +29,7 @@
             <?php the_content(); ?>
           </div>
           <div class="Meta">
-            <p class="Meta-Title">&#092; 同じタグがついた関連記事を探す &#047;</p>
+            <p class="Meta-Title">&#092; 同じタグの関連記事を探す &#047;</p>
             <div class="Meta-Tags">
               <?php the_category(' '); ?>
               <?php the_tags('', ''); ?>

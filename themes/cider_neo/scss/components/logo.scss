@@ -1,0 +1,14 @@
+.Logo {
+  position: relative;
+    svg {
+      position: absolute;
+      left: 0;
+      top: -12px;
+      width: 180px;
+    }
+    &-Caption {
+      color: $primary;
+      font-size: 10px;
+    }
+  }
+  

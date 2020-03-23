@@ -109,7 +109,7 @@ a {
 @media screen and (min-width: 834px) {
   .Layout-Single {
     display: grid;
-    grid-template-columns: 1fr 9fr;
+    grid-template-columns: 2fr 11fr;
     grid-gap: 32px;
   }
 }
@@ -149,7 +149,7 @@ a {
 @media screen and (min-width: 834px) {
   .Layout-Single {
     display: grid;
-    grid-template-columns: 1fr 9fr;
+    grid-template-columns: 2fr 11fr;
     grid-gap: 32px;
   }
 }
@@ -181,7 +181,7 @@ a {
 .Article-Content p, .Article-Content blockquote {
   font-size: 16px;
   line-height: 2;
-  margin: 0 auto 24px;
+  margin: 0 auto 32px;
   padding: 0 4vw;
 }
 
@@ -193,9 +193,9 @@ a {
   }
 }
 
-.Article-Content h2, .Article-Content h3, .Article-Content h4 {
+.Article-Content h2 {
   font-size: 20px;
-  margin: 0 4vw 24px;
+  margin: 0 4vw 32px;
   border-left: 6px solid #fdd734;
   background-color: rgba(0, 0, 0, 0.05);
   padding: 12px 16px;
@@ -203,7 +203,22 @@ a {
 }
 
 @media screen and (min-width: 834px) {
-  .Article-Content h2, .Article-Content h3, .Article-Content h4 {
+  .Article-Content h2 {
+    font-size: 24px;
+    padding: 16px 24px;
+  }
+}
+
+.Article-Content h3 {
+  font-size: 20px;
+  margin: 0 4vw 32px;
+  border-left: 6px solid #fdd734;
+  padding: 12px 16px;
+  line-height: 1.4;
+}
+
+@media screen and (min-width: 834px) {
+  .Article-Content h3 {
     font-size: 24px;
     padding: 16px 24px;
   }
@@ -218,7 +233,7 @@ a {
   margin: 0;
   margin-top: 12px;
   font-size: 14px;
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.5);
   text-align: center;
 }
 
@@ -236,7 +251,7 @@ a {
 @media screen and (min-width: 834px) {
   .Article-Content ul, .Article-Content ol {
     font-size: 17px;
-    width: 85%;
+    width: 84%;
     padding: 0;
   }
 }
@@ -262,9 +277,22 @@ a {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-gap: 24px;
+  align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  margin-bottom: 24px;
-  padding-bottom: 24px;
+  padding: 32px 0;
+}
+
+.Card-Time {
+  display: block;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.Card-Title {
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 20px;
+  line-height: 1.5;
 }
 
 .Editor {
@@ -277,9 +305,13 @@ a {
 
 @media screen and (min-width: 834px) {
   .Editor {
-    display: block;
+    position: sticky;
+    top: 24px;
+    left: 0;
+    display: inline-table;
     margin-bottom: 0;
-    padding: 0;
+    padding: 32px;
+    background-color: rgba(0, 0, 0, 0.05);
   }
 }
 
@@ -303,6 +335,12 @@ a {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+@media screen and (min-width: 834px) {
+  .Editor-Links {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .Editor-Icon {
@@ -335,13 +373,24 @@ a {
 @media screen and (min-width: 834px) {
   .Editor-Name {
     font-size: 14px;
-    text-emphasis: center;
-    margin-bottom: 0;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  .Editor-Name br {
+    display: block;
   }
 }
 
 .Editor-More {
+  display: block;
   font-size: 12px;
+}
+
+@media screen and (min-width: 834px) {
+  .Editor-More {
+    text-align: center;
+    margin-bottom: 16px;
+  }
 }
 
 .Editor-Title {
@@ -350,7 +399,10 @@ a {
 
 @media screen and (min-width: 834px) {
   .Editor-Title {
+    text-align: center;
+    font-size: 12px;
     display: block;
+    margin-bottom: 8px;
   }
 }
 
@@ -366,7 +418,6 @@ a {
 .New-Heading {
   font-size: 32px;
   font-weight: bold;
-  margin-bottom: 24px;
 }
 
 .Header {
@@ -378,14 +429,16 @@ a {
   position: relative;
 }
 
-.Logo img {
+.Logo svg {
   position: absolute;
   left: 0;
-  width: 170px;
+  top: -12px;
+  width: 180px;
 }
 
-.Logo span {
-  opacity: 0;
+.Logo-Caption {
+  color: #fdd734;
+  font-size: 10px;
 }
 
 .Meta {
@@ -402,18 +455,20 @@ a {
   font-size: 18px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .Meta-Tags {
   margin-bottom: 32px;
+  text-align: center;
 }
 
 .Meta-Tags a {
   position: relative;
   font-size: 14px;
   display: inline-block;
-  padding: 8px 20px 8px 32px;
+  padding: 8px 12px 8px 24px;
+  margin: 0 12px 12px 0;
   margin-right: 10px;
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -422,7 +477,7 @@ a {
 .Meta-Tags a:before {
   content: '#';
   position: absolute;
-  left: 20px;
+  left: 12px;
 }
 
 Nav {
@@ -518,7 +573,7 @@ Nav {
 }
 
 .Profile-Desc {
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 .Share {
@@ -535,7 +590,7 @@ Nav {
   font-size: 18px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 .Share-Buttons {
@@ -548,7 +603,8 @@ Nav {
 .Share-Icon {
   height: 24px;
   width: auto;
-  margin: 0 8px 0 0;
+  margin-right: 12px;
+  fill: #fff;
 }
 
 .Share-Label {
@@ -626,17 +682,37 @@ Nav {
 
 .Tab {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  padding: 4vw;
+  white-space: nowrap;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media screen and (min-width: 834px) {
+  .Tab {
+    display: block;
+    margin: 64px 0 0 0;
+    padding: 0;
+    white-space: unset;
+    overflow-x: unset;
+  }
 }
 
 .Tab-Link {
   display: block;
   background-color: rgba(0, 0, 0, 0.05);
-  padding: 18px 12px;
-  margin-bottom: 16px;
+  padding: 24px 18px;
   color: rgba(0, 0, 0, 0.9);
   font-weight: bold;
+  margin-right: 12px;
+}
+
+@media screen and (min-width: 834px) {
+  .Tab-Link {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
 }
 
 .Youtube {

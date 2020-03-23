@@ -20,7 +20,7 @@
 
   @include mq() {
     display: grid;
-    grid-template-columns: 1fr 9fr;
+    grid-template-columns: 2fr 11fr;
     grid-gap: 32px;
   }
 }

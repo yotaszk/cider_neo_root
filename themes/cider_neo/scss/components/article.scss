@@ -17,7 +17,7 @@
     p, blockquote{
       font-size: 16px;
       line-height: 2;
-      margin: 0 auto 24px;
+      margin: 0 auto 32px;
       padding: 0 4vw;
       @include mq() {
         padding: 0;
@@ -25,9 +25,10 @@
         font-size: 17px;
       }
     }
-    h2, h3, h4 {
+
+    h2 {
       font-size: 20px;
-      margin: 0 4vw 24px;
+      margin: 0 4vw 32px;
       border-left: 6px solid $primary;
       background-color: $dark05;
       padding: 12px 16px;
@@ -37,6 +38,19 @@
         padding: 16px 24px;
       }
     }
+
+    h3 {
+      font-size: 20px;
+      margin: 0 4vw 32px;
+      border-left: 6px solid $primary;
+      padding: 12px 16px;
+      line-height: 1.4;
+      @include mq() {
+        font-size: 24px;
+        padding: 16px 24px;
+      }
+    }
+
     .wp-block-image {
       margin-bottom: 32px;
       border-radius: 6px;
@@ -45,7 +59,7 @@
         margin: 0;
         margin-top: 12px;
         font-size: 14px;
-        color: $dark30;
+        color: $dark50;
         text-align: center;
       }
     }
@@ -59,7 +73,7 @@
       }
       @include mq() {
         font-size: 17px;
-        width: 85%;
+        width: 84%;
         padding: 0;
       }
     }

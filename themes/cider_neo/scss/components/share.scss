@@ -7,7 +7,7 @@
     font-size: 18px;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   }
   &-Buttons {
     list-style: none;
@@ -18,7 +18,8 @@
   &-Icon {
     height: 24px;
     width: auto;
-    margin: 0 8px 0 0;
+    margin-right: 12px;
+    fill: $white;
   }
   &-Label {
     font-size: 12px;

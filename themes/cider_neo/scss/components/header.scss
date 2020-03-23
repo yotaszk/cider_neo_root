@@ -1,16 +1,5 @@
 .Header {
   background-color: $primary;
+  // background: linear-gradient(120deg,#fdd734,#ffc51f);
   padding: 40px 4vw;
-}
-
-.Logo {
-position: relative;
-  img {
-    position: absolute;
-    left: 0;
-    width: 170px;
-  }
-  span {
-    opacity: 0;
-  }
 }
