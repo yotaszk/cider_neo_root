@@ -1,8 +1,0 @@
-.Header {
-  background-color: $primary;
-  // background: linear-gradient(120deg,#fdd734,#ffc51f);
-  padding: 20px 4vw;
-  @include mq() {
-    padding: 40px 4vw;
-  }
-}
